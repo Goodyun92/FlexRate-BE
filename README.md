@@ -1,5 +1,17 @@
 # FlexRate
 
+### 동적금리와 대출한도 산출 및 대출 중개 웹 서비스 
+
+</br>
+
+> [:page_facing_up: API DOC](https://www.notion.so/LearningSquad-API-d9bc2a753d79433ba997b469e817c1c5)
+
+#### Development Environment
+- Jdk 11
+- Spring Boot 2.7.17
+- MySql
+
+
 #### 개발환경 :
 #### API docs :
 
