@@ -5,6 +5,7 @@ import com.swssu.flexrate.bank.service.BankService;
 import com.swssu.flexrate.global.dto.ReturnDto;
 import com.swssu.flexrate.loan.domain.Loan;
 import com.swssu.flexrate.security.CustomUserDetails;
+import com.swssu.flexrate.user.dto.BankJoinRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;

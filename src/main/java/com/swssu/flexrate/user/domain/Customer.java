@@ -1,6 +1,8 @@
 package com.swssu.flexrate.user.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.swssu.flexrate.creditRating.domain.CreditRatingInfo;
+import com.swssu.flexrate.loan.domain.Loan;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -24,7 +26,13 @@ public class Customer extends User {
 
     private Boolean isInProgress;   // 대출 진행 중 여부
 
-    //양방향 연결이기때문에 mappedBy 사용
-    @OneToOne(mappedBy = "customer")
+    //양방향 연결 mappedBy 사용
+    @JsonIgnoreProperties("customer")
+    @OneToOne(mappedBy = "customer", fetch = FetchType.LAZY)
     private CreditRatingInfo creditRatingInfo;
+
+    //양방향 연결 mappedBy 사용
+    @JsonIgnoreProperties("customer")
+    @OneToOne(mappedBy = "customer", fetch = FetchType.LAZY)
+    private Loan loan;
 }

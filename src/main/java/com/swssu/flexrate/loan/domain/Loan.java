@@ -1,6 +1,7 @@
 package com.swssu.flexrate.loan.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.swssu.flexrate.user.domain.Bank;
 import com.swssu.flexrate.user.domain.Customer;
 import lombok.*;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 @Setter
 @Table(name = "loan")
 public class Loan {
+    @JsonIgnoreProperties("loan")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -50,10 +52,12 @@ public class Loan {
 
     private Boolean approval;   //승인결정 아직안함 == null
 
-    @ManyToOne
+    @JsonIgnoreProperties("loan")
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
+    @JsonIgnoreProperties("loan")
     @ManyToOne
     @JoinColumn(name = "bank_id", referencedColumnName = "id")
     private Bank bank;

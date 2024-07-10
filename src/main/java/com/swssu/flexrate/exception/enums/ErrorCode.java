@@ -22,6 +22,7 @@ public enum ErrorCode {
 
     MODEL_SERVER_ERR(409, HttpStatus.CONFLICT,""),
 
+    CONFLICT(409, HttpStatus.CONFLICT,"Conflict"),
     NOT_FOUND(404, HttpStatus.NOT_FOUND, "Not Found"),
     FORBIDDEN(403, HttpStatus.FORBIDDEN, "Forbidden"),
     UNAUTHORIZED(401, HttpStatus.UNAUTHORIZED, "Unauthorized"),
