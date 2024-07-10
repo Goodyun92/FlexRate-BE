@@ -1,15 +1,13 @@
 package com.swssu.flexrate.creditRating.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.swssu.flexrate.creditRating.enums.EmploymentType;
 import com.swssu.flexrate.creditRating.enums.HouseType;
 import com.swssu.flexrate.creditRating.enums.IncomeType;
 import com.swssu.flexrate.creditRating.enums.LoanPurpose;
 import com.swssu.flexrate.user.domain.Customer;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -17,6 +15,7 @@ import java.time.LocalDate;
 @Entity
 @Builder
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "creditRatingInfo")
@@ -25,7 +24,8 @@ public class CreditRatingInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @JsonIgnoreProperties("creditRatingInfo")
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 

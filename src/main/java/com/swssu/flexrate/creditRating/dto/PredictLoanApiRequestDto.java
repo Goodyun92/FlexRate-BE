@@ -15,8 +15,7 @@ public class PredictLoanApiRequestDto {
     private String incomeType;
 
     @JsonProperty("company_enterMonth")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyyMMdd")
-    private LocalDate companyEnterMonth;
+    private Integer companyEnterMonth;
 
     @JsonProperty("yearly_income")
     private Long yearlyIncome;
@@ -39,6 +38,7 @@ public class PredictLoanApiRequestDto {
     @JsonProperty("birth_year")
     private Integer BirthYear;
 
+    @JsonProperty("gender")
     private Integer gender;
 
 }
