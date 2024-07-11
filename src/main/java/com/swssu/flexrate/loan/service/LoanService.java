@@ -51,7 +51,7 @@ public class LoanService {
         }
 
         // 대출 은행 임의로 고정
-        Bank bank = bankRepository.findById(2L)
+        Bank bank = bankRepository.findById(1L)
                 .orElseThrow(()->new AppException(ErrorCode.BANK_NOT_FOUND, "대출 가능한 은행이 없습니다."));
 
 
