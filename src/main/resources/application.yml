@@ -17,9 +17,9 @@ resilience4j:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/flexrate?serverTimezone=Asia/Seoul
-    username: root
-    password: 1234
+    url: jdbc:mysql://database-flexrate.c7seqdy5lt2o.ap-northeast-2.rds.amazonaws.com/flexrate?serverTimezone=Asia/Seoul&Unicode=true&character_set_server=utf8mb4
+    username: admin
+    password: adminflexrate
 
   jpa:
     open-in-view: true
