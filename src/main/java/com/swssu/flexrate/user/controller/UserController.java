@@ -97,7 +97,7 @@ public class UserController {
 
     }
 
-    @PutMapping("/nickname")
+    @PatchMapping("/nickname")
     public ReturnDto<Void> updateNickName(@RequestBody UserNicknameRequestDto dto, @AuthenticationPrincipal CustomUserDetails customUserDetails) {
         log.info("update start");
         // 현재 username
