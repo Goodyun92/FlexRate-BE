@@ -32,7 +32,7 @@ public class UserService {
     private final JwtService jwtService;
 
     @Transactional
-    public void joinCustomer(UserJoinRequestDto dto){   //customer 사용자 회원가입
+    public Customer joinCustomer(UserJoinRequestDto dto){   //customer 사용자 회원가입
 
         String username = dto.getUsername();
         String password = dto.getPassword();
@@ -69,6 +69,7 @@ public class UserService {
 
         customerRepository.save(customer);
 
+        return customer;
     }
 
     @Transactional
