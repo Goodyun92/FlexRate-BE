@@ -7,8 +7,8 @@ on:
 
 env:
   DOCKER_IMAGE_NAME: goodyun92/flexrate
-  EC2_HOST: www.flexrate.site
-  EC2_SSH_USER: ec2-user
+  EC2_HOST: 3.35.255.124
+  EC2_SSH_USER: ubuntu
   PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
 
 jobs:
