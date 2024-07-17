@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE_NAME: flexrate
+  DOCKER_IMAGE_NAME: goodyun92/flexrate
   EC2_HOST: www.flexrate.site
   EC2_SSH_USER: ubuntu
   PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
