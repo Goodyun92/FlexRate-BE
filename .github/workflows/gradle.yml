@@ -31,11 +31,13 @@ jobs:
 
     - name: Set up application.yml
       run: |
+        mkdir -p ./src/main/resources
         touch ./src/main/resources/application.yml
         echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
 
     - name: Set up application-secret.properties
       run: |
+        mkdir -p ./src/main/resources
         touch ./src/main/resources/application-secret.properties
         echo "${{ secrets.APPLICATION_SECRET_PROPERTIES }}" > ./src/main/resources/application-secret.properties
 
