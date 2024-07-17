@@ -27,11 +27,13 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        
+
+    - uses: actions/checkout@v4
     - name: Set up application.yml
     - run: touch ./src/main/resources/application.yml
     - run: echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
 
+    - uses: actions/checkout@v4
     - name: Set up application-secret.properties
     - run: touch ./src/main/resources/application-secret.properties
     - run: echo "${{ secrets.APPLICATION_SECRET_PROPERTIES }}" > ./src/main/resources/application-secret.properties
