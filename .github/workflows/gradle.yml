@@ -29,10 +29,12 @@ jobs:
         distribution: 'temurin'
         
     - name: Set up application.yml
-      run: echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+    - run: touch ./src/main/resources/application.yml
+    - run: echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
 
     - name: Set up application-secret.properties
-      run: echo "${{ secrets.APPLICATION_SECRET_PROPERTIES }}" > ./src/main/resources/application-secret.properties
+    - run: touch ./src/main/resources/application-secret.properties
+    - run: echo "${{ secrets.APPLICATION_SECRET_PROPERTIES }}" > ./src/main/resources/application-secret.properties
 
     # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
