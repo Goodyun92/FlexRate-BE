@@ -7,7 +7,7 @@
 #### Development Environment
 - Jdk 11
 - Spring Boot 2.7.17
-- MySql
+- MySQL
 - CI/CD with GithubActions + Docker
 
 </br>
