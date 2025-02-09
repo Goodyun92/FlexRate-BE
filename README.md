@@ -4,8 +4,6 @@
 
 </br>
 
-> [:page_facing_up: API DOC](https://www.notion.so/FlexRate-API-175aa17866f4457ba8be37ecb6f5987c)
-
 #### Development Environment
 - Jdk 11
 - Spring Boot 2.7.17
